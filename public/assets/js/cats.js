@@ -9,14 +9,14 @@ $(function() {
     };
 
     // Send the PUT request.
-    $.ajax("/api/hamburgers/" + id, {
+    $.ajax("/api/cats/" + id, {
       type: "PUT",
       data: newSleepState
     }).then(
       function() {
         console.log("changed sleep to", newSleep);
         // Reload the page to get the updated list
-        lohamburgerion.reload();
+        location.reload();
       }
     );
   });
@@ -25,35 +25,35 @@ $(function() {
     // Make sure to preventDefault on a submit event.
     event.preventDefault();
 
-    var newhamburger = {
+    var newCat = {
       name: $("#ca").val().trim(),
       sleepy: $("[name=sleepy]:checked").val().trim()
     };
 
     // Send the POST request.
-    $.ajax("/api/hamburgers", {
+    $.ajax("/api/cats", {
       type: "POST",
-      data: newhamburger
+      data: newCat
     }).then(
       function() {
-        console.log("created new hamburger");
+        console.log("created new cat");
         // Reload the page to get the updated list
-        lohamburgerion.reload();
+        location.reload();
       }
     );
   });
 
-  $(".delete-hamburger").on("click", function(event) {
+  $(".delete-cat").on("click", function(event) {
     var id = $(this).data("id");
 
     // Send the DELETE request.
-    $.ajax("/api/hamburgers/" + id, {
+    $.ajax("/api/cats/" + id, {
       type: "DELETE"
     }).then(
       function() {
-        console.log("deleted hamburger", id);
+        console.log("deleted cat", id);
         // Reload the page to get the updated list
-        lohamburgerion.reload();
+        location.reload();
       }
     );
   });

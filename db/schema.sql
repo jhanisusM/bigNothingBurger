@@ -1,12 +1,12 @@
 ### Schema
 
-CREATE DATABASE hamburger_db;
-USE hamburger_db;
+CREATE DATABASE cat_db;
+USE cat_db;
 
-CREATE TABLE ingredients
+CREATE TABLE cats
 (
 	id int NOT NULL AUTO_INCREMENT,
 	name varchar(255) NOT NULL,
-	devour BOOLEAN DEFAULT false,
+	sleepy BOOLEAN DEFAULT false,
 	PRIMARY KEY (id)
 );
