@@ -1,5 +1,4 @@
 // Make sure we wait to attach our handlers until the DOM is fully loaded.
-Handlebars.compile($('#t').html())
 $(function() {
   
   $(".change-sleep").on("click", function(event) {
@@ -28,8 +27,8 @@ $(function() {
     event.preventDefault();
 
     var newCat = {
-      name: $("#ca").val().trim(),
-      sleepy: $("[name=sleepy]:checked").val().trim()
+      name: $("#ingredient").val().trim(),
+      sleepy: 0
     };
 
     // Send the POST request.

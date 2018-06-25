@@ -27,13 +27,12 @@ li {
   background-size: cover;
 }
 body, html {
-  height: 100%;
+height: 100%;
 }
 
 
 .transbox{
-  background-color: rgba(255, 255, 255, .2);
-  
+  background-color: rgba(255, 255, 255, .75);
    text-align:center;  
-   /* overflow: hidden */
+   overflow: auto;
 }
