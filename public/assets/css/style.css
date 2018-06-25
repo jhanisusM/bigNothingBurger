@@ -36,3 +36,10 @@ height: 100%;
    text-align:center;  
    overflow: auto;
 }
+
+#hamburger{
+background-image: url("../images/burger_clipart.jpg");
+/* background-attachment: fixed; */
+background-position: center;
+background-repeat: no-repeat;
+}
